@@ -1,0 +1,84 @@
+@import 'media-queries';
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    font-size: 2vh;
+    box-sizing: border-box;
+}
+nav{
+    background: #111;
+    width: 100vw;
+    height: auto;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include respond-to(m) {
+        display: block;
+        height: auto;
+    }
+    form{
+        margin: 0;
+        padding: 1em;
+        position: relative;
+        @include respond-to(m) {
+            max-width: 30em;
+            margin: auto;
+        }
+        .input{
+            display: inline;
+            @include respond-to(m) {
+                display: block;
+                padding: .5em 0;
+                &::after{
+                    content: '';
+                    display: block;
+                    clear: both;
+                }
+
+            }
+            label, input{
+                font-size: 1em;
+                padding: .3em;
+                @include respond-to(m) {
+                    display: block;
+                    position: relative;
+                    box-sizing: border-box;
+                }
+            }
+            label{
+                color: white;
+                @include respond-to(m) {
+                    float: left;
+                    text-align: right;
+                    width: 30%;
+                    left: 0;
+                }
+            }
+            input{
+                border: none;
+                &[type=text], &[type=password], {
+                    color: #666;
+                }
+                &[type=submit]{
+                    border: 1px solid #ccc;
+                    background: #111;
+                    color: white;
+                    border-radius: .5em;
+                    transition: 0.3s;
+                    &:hover{
+                        color: #111;
+                        background: white;
+                    }
+                }
+                @include respond-to(m) {
+                    float: right;
+                    width: 70%;
+                    right: 0;
+                    top: 0;
+                }
+            }
+        }
+    }
+}

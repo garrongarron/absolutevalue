@@ -1,0 +1,112 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	font-size: 2vh;
+	box-sizing: border-box;
+}
+
+nav {
+	background: #111;
+	width: 100vw;
+	height: auto;
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@media only screen and (max-width: 960px) {
+	nav {
+		display: block;
+		height: auto;
+	}
+}
+
+nav form {
+	margin: 0;
+	padding: 1em;
+	position: relative;
+}
+
+@media only screen and (max-width: 960px) {
+	nav form {
+		max-width: 30em;
+		margin: auto;
+	}
+}
+
+nav form .input {
+	display: inline;
+}
+
+@media only screen and (max-width: 960px) {
+	nav form .input {
+		display: block;
+		padding: .5em 0;
+	}
+	nav form .input::after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+}
+
+nav form .input label,
+nav form .input input {
+	font-size: 1em;
+	padding: .3em;
+}
+
+@media only screen and (max-width: 960px) {
+	nav form .input label,
+	nav form .input input {
+		display: block;
+		position: relative;
+		box-sizing: border-box;
+	}
+}
+
+nav form .input label {
+	color: white;
+}
+
+@media only screen and (max-width: 960px) {
+	nav form .input label {
+		float: left;
+		text-align: right;
+		width: 30%;
+		left: 0;
+	}
+}
+
+nav form .input input {
+	border: none;
+}
+
+nav form .input input[type=text],
+nav form .input input[type=password] {
+	color: #666;
+}
+
+nav form .input input[type=submit] {
+	border: 1px solid #ccc;
+	background: #111;
+	color: white;
+	border-radius: .5em;
+	transition: 0.3s;
+}
+
+nav form .input input[type=submit]:hover {
+	color: #111;
+	background: white;
+}
+
+@media only screen and (max-width: 960px) {
+	nav form .input input {
+		float: right;
+		width: 70%;
+		right: 0;
+		top: 0;
+	}
+}
